@@ -1,0 +1,353 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111; /* Deep Black */
+    color: #F8F9FA; /* Soft White */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #FFD700; /* Gold */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: #FF61E6; /* Neon Pink */
+  }
+  
+  /* Navbar Styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #0F172A, #1E293B); /* Deep gradient */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    animation: slideIn 1s ease-out;
+  }
+  
+  nav .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFD700; /* Gold */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    color: #F8F9FA;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links li a:hover {
+    color: #FF61E6; /* Neon Pink */
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    color: #FFD700; /* Gold */
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #00D4FF, #FF61E6); /* Vibrant Neon Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInHero 1.5s ease-out;
+  }
+  
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-text {
+    z-index: 2;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    animation: textReveal 2s ease-out forwards;
+  }
+  
+  .hero span {
+    color: #FFD700; /* Gold */
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #D1D5DB; /* Light Gray */
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 120px 20px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #181A20, #24292F); /* Rich Dark Gradient */
+    margin: 40px 0;
+    animation: fadeInSection 1s ease-out forwards;
+  }
+  
+  .section img {
+    max-width: 100%;
+    border-radius: 15px;
+    transform: translateY(10px);
+    opacity: 0;
+    animation: fadeInImage 1s ease-out forwards;
+  }
+  
+  .content {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content div {
+    max-width: 500px;
+    flex: 1;
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFD700;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    color: #D1D5DB;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInHero {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes textReveal {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInSection {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInImage {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Parallax Effect */
+  .parallax {
+    background: url('images/parallax-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 500px;
+    animation: parallaxScroll 10s infinite linear;
+  }
+  
+  @keyframes parallaxScroll {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    background: #1E293B;
+    padding: 50px 20px;
+    text-align: center;
+    color: #F8F9FA;
+    animation: fadeInFooter 1.5s ease-out forwards;
+  }
+  
+  footer h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+  }
+  
+  footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  footer input,
+  footer textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #3B4B5C;
+    background-color: #24292F;
+    color: #F8F9FA;
+  }
+  
+  footer input:focus,
+  footer textarea:focus {
+    outline: none;
+    border-color: #FFD700; /* Gold */
+  }
+  
+  footer button {
+    background: linear-gradient(135deg, #FF61E6, #FFD700);
+    color: #FFF;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  footer button:hover {
+    background: linear-gradient(135deg, #00D4FF, #FF61E6);
+  }
+  
+  footer button:focus {
+    outline: none;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    nav .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: #1E293B;
+      width: 200px;
+      padding: 20px;
+    }
+  
+    nav .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    nav .nav-links.active {
+      display: flex;
+    }
+  
+    .content {
+      flex-direction: column;
+      text-align: center;
+    /* Add this to animate sections as they scroll into view */
+  @keyframes fadeInSection {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .section {
+    animation: fadeInSection 1s ease-out forwards;
+  }
+  }
